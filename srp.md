@@ -87,9 +87,10 @@ export class Purchase {
      * Максимальная из предложенных продавцами цен
      */
     getMaximalPrice () {
-        return this._offers.find(offer => {
+        const seller = this._offers.find(offer => {
             // ...
         });
+        return seller.price;
     }
 
     /**
@@ -97,12 +98,12 @@ export class Purchase {
      *
      * Минимальная из предложенных продавцами цен
      *
-     * Чтобы не дублировать код, разработчик №2 вернул результат _calculateOptimalSeller
+     * Чтобы не дублировать код, разработчик №2 вернул результат getProspectivePrice
      * В итоге, теперь Purchase имеет две ответственности (Актор 1 и Актор 2)
      * @returns {*}
      */
     getMinimalPrice () {
-        return this._calculateOptimalSeller();
+        return this.getProspectivePrice();
     }
 }
 ```
