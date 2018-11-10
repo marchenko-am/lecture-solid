@@ -1,5 +1,5 @@
 ---
-description: Принцип единственной ответственности | Single Responsibility Principe | SRP
+description: Принцип единственной ответственности | Single Responsibility Principle | SRP
 ---
 
 # SRP
